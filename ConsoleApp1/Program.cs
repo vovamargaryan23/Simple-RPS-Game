@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace ConsoleApp1
 {
     class Program
@@ -11,7 +10,9 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             string[] answers = { "stone", "paper", "scissors" };
-            string user = Console.ReadLine();
+            Console.Write("Enter Stone, Paper or Scissors: ");
+            string input = Console.ReadLine();
+            string user = input.ToLower();
             Random rnd = new Random();
             int a = rnd.Next(answers.Length);
             if (user == answers[0] || user == answers[1] || user == answers[2])
